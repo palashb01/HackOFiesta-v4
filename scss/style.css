@@ -1,0 +1,172 @@
+.kool1{
+
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.font-display {
+    font-family: Clash Display, sans-serif;
+  }
+
+  .text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+/* .kool2{
+    color: black;
+    font-size: 11px;
+    font-weight: 300;
+    transition: background-color 0.4s, color 0.4s, border-color 0.4s, transform 0.4s; 
+   
+} */
+.logo{
+  margin: auto;
+  position: relative;
+  bottom: 300px;
+}
+
+
+/***************************************************************************************
+SPONSORS PAGE 
+***************************************************************************************/
+
+.showcase__card__picture__sponsors {
+  width: 100%;
+  height: 80%;
+  backdrop-filter: blur(24px);
+  border-radius: 24px;
+  box-shadow: 0 0 24px 0px #f3f5ff;
+  transition: all .1s ease-in-out;
+  text-align: center;
+  border: 1px solid #e6ecff;
+}
+
+.showcase__card__picture__sponsors:hover {
+  box-shadow: 0 0 48px 0px #d9e2ff;
+  border: 1px solid #e6ecff;
+}
+
+.partial-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.partial-image-sponsors {
+  width: 50%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/***************************************************************************************
+THEME PAGE 
+***************************************************************************************/
+.t-circle{
+  width: 50%;
+  background-color: blue;
+  
+}
+.lottie{
+  margin: auto;
+  height: 10vh; 
+  margin-top: 5vh;
+}
+.lottie-text{
+  margin: auto;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  text-align: center;
+  font-size: 2rem;
+  
+}
+.card{
+   margin-top: 5vh;
+   margin-bottom: 5vh;
+   opacity: 0.9 ;
+   border-radius: 20px;
+   z-index: 99;
+   background: rgba(255, 255, 255, 0.8);
+   border-radius: 10px;
+   box-shadow: 0 1.4rem 3rem rgba(160, 160, 160, 0.3);
+   transition-timing-function: ease-in-out;
+   animation-timing-function: ease-in-out;
+   padding-top: 1px;
+}
+.card:hover {
+  animation-name: big;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transition-timing-function: ease;
+  
+  animation-timing-function: ease;
+}
+.card:hover .cont{
+  display: block;
+  animation-name: context;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+@keyframes context  {
+  0%{
+    transform: translateY(25px);
+    opacity: 0.1;
+  }
+  25%{
+    opacity: 0.3;
+  }
+  50%{
+    opacity: 0.6;
+  }
+  75%{
+    opacity: 0.7;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes big  {
+  0%{
+    height: 30vh;
+  }
+  100%{
+    height: 50vh;
+  }
+}
+.themebox{
+  margin-top: 5vh;
+}
+@media only screen and (min-width: 64em) {
+  .card {
+    top: initial;
+    bottom: 1rem;
+    width: 80rem;
+    margin-top: 0; } }
+@media only screen and (min-width: 100em) {
+  .card {
+    bottom: 10rem; } }
+.animation{
+  margin: auto
+}
+.cont{
+  display: none;
+  padding: 20px;
+}
+.afterleave{
+  height: 40vh;
+   animation: onleave 0.7s  1 forwards;
+}
+@keyframes onleave  {
+  0%{
+    height: 50vh;
+  }
+  100%{
+    height: 30vh;
+  }
+}
