@@ -170,3 +170,46 @@ THEME PAGE
     height: 30vh;
   }
 }
+.prize-lottie{
+  display: block;
+ 
+}
+
+.prize{
+  padding-left: 20px;
+  padding-right: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 1.4rem 3rem rgba(160, 160, 160, 0.3);
+}
+.prize-content{
+  display: block;
+ 
+}
+.blast{
+  position: absolute;
+  z-index: -100;
+}
+.blastright{
+  position: absolute;
+  right: 300px;
+  z-index: -100;
+}
+.blastleft{
+  position: absolute;
+  left: 80px;
+  z-index: -100;
+}
+@media only screen and (max-width: 1076px) {
+  .pz3{
+    margin-top: 400px;
+  }
+}
+@media only screen and (max-width: 767px) {
+ .pz2{
+  margin-top: 400px;
+ }
+ .pz3{
+  margin-top: 800px;
+ }
+}
