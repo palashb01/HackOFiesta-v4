@@ -213,3 +213,160 @@ THEME PAGE
   margin-top: 800px;
  }
 }
+.speakers{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em 1em;
+  text-align: center;
+}
+.column {
+  width: 100%;
+  padding: 0.5em 0;
+}
+.speaker img{
+  width: 100%;
+  border-radius: 50%;
+}
+.speaker{
+  box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
+  padding: 3.5em 1em;
+  border-radius: 0.6em;
+  color: #1f003b;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #ffffff;
+  margin-top: 30px;
+}
+.speaker .img-container{
+  width: 8em;
+  height: 8em;
+  background-color: #a993ff;
+  padding: 0.5em;
+  border-radius: 50%;
+  margin: 0 auto 2em auto;
+}
+.speaker h3 {
+  font-weight: 500;
+}
+.speaker p {
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0.5em 0 2em 0;
+  letter-spacing: 2px;
+}
+.icons {
+  width: 50%;
+  min-width: 180px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.speaker:hover{
+  background: linear-gradient(#6045ea, #8567f7);
+  color: #ffffff;
+}
+.speaker:hover .img-container{
+  transform: scale(1.15);
+}
+.speaker a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.4em;
+}
+@media screen and (min-width: 768px) {
+  section {
+    padding: 1em 7em;
+  }
+}
+@media screen and (min-width: 992px) {
+  section {
+    padding: 1em;
+  }
+  .speaker {
+    padding: 5em 1em;
+  }
+  .column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 0 1em;
+  }
+}
+.cssanimation, .cssanimation span {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.cssanimation span { display: inline-block }
+
+.leFadeInLeft span { animation-name: leFadeInLeft }
+@keyframes leFadeInLeft {
+  from {
+      opacity: 0;
+      transform: translateX(-60px);
+  }
+  to { opacity: 1 }
+}
+.pz1{
+  animation: lefttoright 2s forwards ;
+  animation-delay: 0.5s;
+}
+.pz2{
+  animation: toptobottom 2s forwards ;
+  animation-delay: 0.5s;
+}
+.pz3{
+  animation: righttoleft 2s forwards ;
+  animation-delay: 0.5s;
+}
+@keyframes lefttoright {
+  0%{
+    transform: translate(-600px,-600px);
+  }
+ 
+  100%{
+    transform: translateX(0px);
+  }
+}
+@keyframes toptobottom {
+  0%{
+    transform: translate(0px,-600px);
+  }
+ 
+  100%{
+    transform: translateX(0px);
+  }
+}
+@keyframes righttoleft {
+  0%{
+    transform: translate(600px,-600px);
+  }
+ 
+  100%{
+    transform: translateX(0px);
+  }
+}
+.firework{
+  position: absolute;
+  transform: translate(-30px,-100px);
+  display: none;
+  z-index: -1;
+}
+.prize{
+  
+  padding: 30px;
+  margin-bottom: 60px;
+  transition: 0.8s;
+}
+.prize:hover{
+ 
+  transform: scale(1.4);
+  scale: 1.1;
+}
+.prize:hover .firework{
+  display: block;
+ 
+}
