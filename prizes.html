@@ -6,7 +6,7 @@
       name="description"
       content="Create badass, fluid and smooth transition between your website&#39;s pages."
     />
-
+    <link href="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/cssanimation.min.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="kool1.jpg" />
     <link rel="icon" type="image/png" sizes="32x32" href="kool1.jpg" />
     <link rel="icon" type="image/png" sizes="16x16" href="kool1.jpg" />
@@ -421,7 +421,7 @@
                   <li class="menu__pages__item" data-ref="menu.item">
                     <a
                       class="menu__pages__item__link"
-                      href="/docs/getstarted/intro/"
+                      href="/speaker.html"
                     >
                       Speakers
                     </a>
@@ -543,12 +543,11 @@
               <div class="page-inner">
                 <div class="page__header">
                    
-                  <h1 id="Examples">
-                    <a href="#Examples" class="headerlink" title="Examples"></a
-                    >Prizes
+                  <h1 id="Examples cssanimation sequence leFadeInLeft">
+                    <a href="#Examples" class="headerlink " title="Examples"></a>Prizes
                   </h1>
                   
-                  <p>
+                  <p class="cssanimation sequence leFadeInLeft">
                     If you believe in yourself and have dedication and pride -
                     and never quit, you'll be a winner
                   </p>
@@ -562,7 +561,7 @@
 
                 <li class="grid__item example__card">
                   <div class="example__card__links">
-                    <div class="prize">
+                    <div class="prize pz1">
                       <div class="prize-lottie">
                         <img
                           class="lott"
@@ -573,6 +572,14 @@
                           autoplay
                         >
                       </div>
+                      <img
+                      class="firework"
+                      src="./lottie/firework2.gif"
+                      background="transparent"
+                      speed="1"
+                      loop
+                      autoplay
+                    >
                       <div class="prize-content">
                         Extended 3 month trial period by Echo3D Three month
                         Hacker plans 6 months free plan of voiceflow pro Free
@@ -597,6 +604,14 @@
                             autoplay
                           >
                         </div>
+                        <img
+                        class="firework"
+                        src="./lottie/firework2.gif"
+                        background="transparent"
+                        speed="1"
+                        loop
+                        autoplay
+                      >
                         <div class="prize-content">
                           Extended 3 month trial period by Echo3D Three month
                           Hacker plans 6 months free plan of voiceflow pro Free
@@ -621,6 +636,14 @@
                             autoplay
                           >
                         </div>
+                        <img
+                        class="firework"
+                        src="./lottie/firework2.gif"
+                        background="transparent"
+                        speed="1"
+                        loop
+                        autoplay
+                      >
                         <div class="prize-content">
                           Extended 3 month trial period by Echo3D Three month
                           Hacker plans 6 months free plan of voiceflow pro Free
@@ -645,6 +668,79 @@
       <div class="transition__title"></div>
       <div class="transition__background"></div>
     </div>
+    <script>
+      /**
+ * letteranimation.js
+ * https://www.cssanimatio.io
+ * Created and maintained by: Pavel
+ * Find me at: https://www.linkedin.com/in/yesiamrocks/
+ * Email: hello@cssanimation.io
+ * Github: https://github.com/yesiamrocks/cssanimation.io
+ * Title: CSS Animation Library for Developers and Ninjas
+ * Copyright (c) 2017 Pavel
+ * License: cssanimattion is licensed under the MIT license
+ **/
+
+window.onload = function() {
+    animateSequence();
+    animateRandom();
+};
+
+function animateSequence() {
+    var a = document.getElementsByClassName('sequence');
+    for (var i = 0; i < a.length; i++) {
+        var $this = a[i];
+        var letter = $this.innerHTML;
+        letter = letter.trim();
+        var str = '';
+        var delay = 100;
+        for (l = 0; l < letter.length; l++) {
+            if (letter[l] != ' ') {
+                str += '<span style="animation-delay:' + delay + 'ms; -moz-animation-delay:' + delay + 'ms; -webkit-animation-delay:' + delay + 'ms; ">' + letter[l] + '</span>';
+                delay += 150;
+            } else
+                str += letter[l];
+        }
+        $this.innerHTML = str;
+    }
+}
+
+function animateRandom() {
+    var a = document.getElementsByClassName('random');
+    for (var i = 0; i < a.length; i++) {
+        var $this = a[i];
+        var letter = $this.innerHTML;
+        letter = letter.trim();
+        var delay = 70;
+        var delayArray = new Array;
+        var randLetter = new Array;
+        for (j = 0; j < letter.length; j++) {
+            while (1) {
+                var random = getRandomInt(0, (letter.length - 1));
+                if (delayArray.indexOf(random) == -1)
+                    break;
+            }
+            delayArray[j] = random;
+        }
+        for (l = 0; l < delayArray.length; l++) {
+            var str = '';
+            var index = delayArray[l];
+            if (letter[index] != ' ') {
+                str = '<span style="animation-delay:' + delay + 'ms; -moz-animation-delay:' + delay + 'ms; -webkit-animation-delay:' + delay + 'ms; ">' + letter[index] + '</span>';
+                randLetter[index] = str;
+            } else
+                randLetter[index] = letter[index];
+            delay += 80;
+        }
+        randLetter = randLetter.join("");
+        $this.innerHTML = randLetter;
+    }
+}
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+    </script>
 
     <script src="https://barba.js.org/js/main.js"></script>
   </body>
