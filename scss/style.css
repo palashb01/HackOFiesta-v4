@@ -384,3 +384,99 @@ THEME PAGE
   display: block;
  
 }
+
+
+.teamcard{
+  
+  display: inline-block;
+  opacity: 0.9 ;
+  border-radius: 20px;
+  z-index: 99;
+  width: 320px; 
+  height: 320px;
+  
+}
+.teamcard .teamimage{
+   overflow: hidden;
+    width: inherit;
+    border-radius: 10px;
+   
+}
+.teamimage img{
+  border-radius: 10px;
+  width: inherit;
+  overflow: hidden;
+  transition: 1s;
+}
+.teamcard:hover  .teamimage img{
+  border-radius: 10px;
+  box-shadow: 0 1.4rem 3rem rgba(160, 160, 160, 0.3);
+  width: inherit;
+  overflow: hidden;
+     scale: 1.4;
+     filter: blur(50);
+  -webkit-filter: blur(8px);
+
+}
+.team-content{
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  color: white;
+  font-weight: 900;
+  font-size: 1.8rem;
+  transform: translateY(-200px);
+  display: none;
+}
+.team-content h3{
+  
+  margin-top: -10px;
+}
+.teamcard:hover .team-content{
+  text-align: center;
+  display: block;
+}
+.teamicons {
+ 
+  margin: auto;
+  padding: 10px;
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+}
+.teamicons li{
+  list-style: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 270px) {
+  .teamcard{
+    width: 200px; 
+    height: 200px; 
+  }
+}
+@media only screen and (max-width: 1076px) {
+  .team3{
+    margin-top: 400px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .team2{
+    margin-top: 200px;
+  }
+}
+.grid__item .example__card{
+   margin: auto;
+}
+@media only screen and (max-width: 370px) {
+  .teamcard{
+    width: 240px; 
+    height: 240px; 
+  }
+  .team2{
+    margin-top: 100px;
+  }
+  .team3{
+    margin-top: 200px;
+  }
+}
