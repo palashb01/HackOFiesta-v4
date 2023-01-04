@@ -7,9 +7,9 @@
       content="Create badass, fluid and smooth transition between your website&#39;s pages."
     />
     <link rel="stylesheet" href="/scss/style.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="kool1.jpg">
-    <link rel="icon" type="image/png" sizes="32x32" href="kool1.jpg">
-    <link rel="icon" type="image/png" sizes="16x16" href="kool1.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/imgs/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/imgs/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/imgs/logo.png">
     <link
       rel="manifest"
       href="https://barba.js.org/favicons/site.webmanifest?rev=1"
@@ -101,7 +101,8 @@
         <div class="header__wrapper">
           <div class="header__infos">
             <a class="header__infos__logo" href="/">
-              <img src="kool1.jpg" alt="Barba.js logo" class="kool1" />
+              <img src="assets/imgs/Frame 2.svg" alt="HOF V4" class="kool1 logoNoHovered" id="logo_nohover" />
+            <img src="assets/imgs/Group 10.svg" alt="HOF V4" class="kool1 logoHovered" id="logo_hover" />
               <span class="h-visually-hidden">Go to home</span>
             </a>
             <span class="header__infos__version">
@@ -215,14 +216,14 @@
                     </svg>
                     <div class="menu-extra__twitter__label">HOF_twit1</div>
                   </a>
-                  <div class="menu-extra__credits" data-ref="menu.item">
+                  <!-- <div class="menu-extra__credits" data-ref="menu.item">
                     <a href="https://join.slack.com/t/barbajs/shared_invite/enQtNTU3NTAyMjkxMzAyLTI1NDIxZDZmMGJjMDlmNzFkODZmMmVmN2U2ODg2Y2M3MzczMDdjZTk5ODQwNWZkYWVlMDM5NGZiODJmMWVhODk"
                       target="_blank" rel="nofollow"><img
                         src="https://camo.githubusercontent.com/50859fa18a7c6eafbdd959f2c43603ec0aad96b8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f736c61636b2d6368616e6e656c2d707572706c652e7376673f7374796c653d666c61742d737175617265266c6f676f3d736c61636b"
                         alt="Slack channel"
                         data-canonical-src="https://img.shields.io/badge/slack-channel-purple.svg?style=flat-square&amp;logo=slack"
                         style="max-width: 100%" /></a>
-                  </div>
+                  </div> -->
                 </div>
               </div>
               <!-- Menu Footer [end]-->
@@ -469,5 +470,19 @@
     <script src="https://barba.js.org/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" defer></script>
     <script src="./js/main.js" defer></script>
+    <script>
+      const nohover = document.getElementById('logo_nohover');
+      const hover = document.getElementById('logo_hover');
+      nohover.onmouseenter = () => {
+        console.log('hover')
+        nohover.style.opacity = 0;
+        hover.style.opacity = 1;
+      }
+      nohover.onmouseleave = () => {
+        console.log('leave')
+        nohover.style.opacity = 1;
+        hover.style.opacity = 0;
+      }
+    </script>
   </body>
 </html>
