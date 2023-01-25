@@ -67,6 +67,9 @@
       src="https://www.googletagmanager.com/gtag/js?id=UA-136431166-1"
     ></script>
     <script>
+      function handleReload(){
+        location.reload();
+      }
       window.GTAG_ID = "UA-136431166-1";
 
       window.dataLayer = window.dataLayer || [];
@@ -100,7 +103,7 @@
       <header class="site-header header" role="banner" data-component="header">
         <div class="header__wrapper">
           <div class="header__infos">
-            <a class="header__infos__logo" href="/">
+            <a class="header__infos__logo" href="/" onclick="window.location.assign(this.href)">
               <img src="assets/imgs/Frame 2.svg" alt="HOF V4" class="kool1 logoNoHovered" id="logo_nohover" />
             <img src="assets/imgs/Group 10.svg" alt="HOF V4" class="kool1 logoHovered" id="logo_hover" />
               <span class="h-visually-hidden">Go to home</span>
@@ -141,7 +144,7 @@
                   <!-- Page -->
   
                   <li class="menu__pages__item" data-ref="menu.item">
-                    <a class="menu__pages__item__link" href="./about.html">
+                    <a class="menu__pages__item__link" href="./about.html" onclick="window.location.assign(this.href)">
                       About
                     </a>
   
@@ -151,7 +154,7 @@
                   </li>
   
                   <li class="menu__pages__item" data-ref="menu.item">
-                    <a class="menu__pages__item__link" href="/theme.html">
+                    <a class="menu__pages__item__link" href="/theme.html" onclick="window.location.assign(this.href)">
                       Theme
                     </a>
   
@@ -161,7 +164,7 @@
                   </li>
   
                   <li class="menu__pages__item" data-ref="menu.item">
-                    <a class="menu__pages__item__link" href="/prizes.html">
+                    <a class="menu__pages__item__link" href="/prizes.html"  onclick="window.location.assign(this.href)">
                       Prizes
                     </a>
   
@@ -171,7 +174,7 @@
                   </li>
   
                   <li class="menu__pages__item" data-ref="menu.item">
-                    <a class="menu__pages__item__link" href="/speaker.html">
+                    <a class="menu__pages__item__link" href="/speaker.html"  onclick="window.location.assign(this.href)">
                       Speakers
                     </a>
   
@@ -181,7 +184,7 @@
                   </li>
   
                   <li class="menu__pages__item" data-ref="menu.item">
-                    <a class="menu__pages__item__link" href="./sponsers.html">
+                    <a class="menu__pages__item__link" href="./sponsers.html" onclick="window.location.assign(this.href)">
                       Sponsers
                     </a>
   
@@ -190,7 +193,7 @@
                     <!-- Subpages [end]-->
                   </li>
                   <li class="menu__pages__item" data-ref="menu.item">
-                    <a class="menu__pages__item__link" href="/team.html"> Team </a>
+                    <a class="menu__pages__item__link" href="/team.html" onclick="window.location.assign(this.href)"> Team </a>
   
                     <!-- Subpages -->
   
@@ -204,11 +207,11 @@
   
               <!-- Menu Footer -->
               <div class="menu__footer">
-                <a class="menu__footer__download" href="#" data-ref="menu.item">
+                <a class="menu__footer__download" href="#" data-ref="menu.item" onclick="window.location.assign(this.href)">  
                   REGISTER
                 </a>
                 <div class="menu__footer__extra menu-extra">
-                  <a class="menu-extra__twitter" href="https://twitter.com/hackofiesta" target="_blank"
+                  <a class="menu-extra__twitter" href="https://twitter.com/hackofiesta" target="_blank"  onclick="window.location.assign(this.href)"
                     data-barba-prevent data-ref="menu.item">
                     <svg class="menu-extra__twitter__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 13">
                       <path
@@ -217,7 +220,7 @@
                     <div class="menu-extra__twitter__label">HOF_twit1</div>
                   </a>
                   <!-- <div class="menu-extra__credits" data-ref="menu.item">
-                    <a href="https://join.slack.com/t/barbajs/shared_invite/enQtNTU3NTAyMjkxMzAyLTI1NDIxZDZmMGJjMDlmNzFkODZmMmVmN2U2ODg2Y2M3MzczMDdjZTk5ODQwNWZkYWVlMDM5NGZiODJmMWVhODk"
+                    <a href="https://join.slack.com/t/barbajs/shared_invite/enQtNTU3NTAyMjkxMzAyLTI1NDIxZDZmMGJjMDlmNzFkODZmMmVmN2U2ODg2Y2M3MzczMDdjZTk5ODQwNWZkYWVlMDM5NGZiODJmMWVhODk"  onclick="window.location.assign(this.href)"
                       target="_blank" rel="nofollow"><img
                         src="https://camo.githubusercontent.com/50859fa18a7c6eafbdd959f2c43603ec0aad96b8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f736c61636b2d6368616e6e656c2d707572706c652e7376673f7374796c653d666c61742d737175617265266c6f676f3d736c61636b"
                         alt="Slack channel"
@@ -440,6 +443,10 @@
 
                   // Set up the clock
                   document.getElementById("clock").innerHTML = getTime();
+                  const clock = document.getElementById("clock");
+                  if (navigator.userAgent.indexOf("Firefox") > 0) {
+                    clock.style.marginTop = "3em";
+                  }
                   // Set clock interval to tick clock
                   setInterval(() => {
                     document.getElementById("clock").innerHTML = getTime();
@@ -448,8 +455,8 @@
               </h1>
 
               <div class="homepage__buttons">
-                <a href="/features/user-friendly/" class="button">DISCORD</a>
-                <a href="docs/getstarted/intro/" class="button button--fill"
+                <a href="/features/user-friendly/" class="button" onclick="window.location.assign(this.href)">DISCORD</a>  
+                <a href="docs/getstarted/intro/" class="button button--fill"  onclick="window.location.assign(this.href)"
                   >REGISTER 📖</a
                 >
               </div>
