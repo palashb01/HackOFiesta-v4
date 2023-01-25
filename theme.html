@@ -171,7 +171,7 @@
                   <!-- Subpages [end]-->
                 </li>
                 <li class="menu__pages__item" data-ref="menu.item">
-                  <a class="menu__pages__item__link" href="/faq.html"> Faq </a>
+                  <a class="menu__pages__item__link" href="/faq.html" onclick="window.location.assign(this.href)"> Faq </a>
     
                   <!-- Subpages -->
     
@@ -210,6 +210,26 @@
     <main class="site-main" role="main">
       <div class="site-content">
         <div class="site-content-inner">
+                <ul class="feature__nav">
+                  <li class="feature__nav__el">
+                    <a href="/" onclick="window.location.assign(this.href)">
+                      <svg viewBox="0 0 21 15" aria-hidden="true" class="icon--barba">
+                        <!-- <use attr.xlink:href="assets/svg/sprite.svg#barba-arrow-prev"></use> -->
+                        <use xlink:href="#barba-arrow-prev"></use>
+                      </svg>
+                      <span>Home</span>
+                    </a>
+                  </li>
+                  <li class="feature__nav__el">
+                    <a href="/theme.html" onclick="window.location.assign(this.href)">
+                      <span>Theme</span>
+                      <svg viewBox="0 0 21 15" aria-hidden="true" class="icon--barba">
+                        <!-- <use attr.xlink:href="assets/svg/sprite.svg#barba-arrow-next"></use> -->
+                        <use xlink:href="#barba-arrow-next"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
 
           
 <div class="feature" data-component="feature" data-feature-slug="Theme" data-feature-order="0">
@@ -504,26 +524,7 @@
 
 
 
-<ul class="feature__nav">
-  <li class="feature__nav__el">
-    <a href="/about.html"  onclick="window.location.assign(this.href)">
-      <svg viewBox="0 0 21 15" aria-hidden="true" class="icon--barba">
-  <!-- <use attr.xlink:href="assets/svg/sprite.svg#barba-arrow-prev"></use> -->
-  <use xlink:href="#barba-arrow-prev"></use>
-</svg>
-      <span>About</span>
-    </a>
-  </li>
-  <li class="feature__nav__el">
-    <a href="/prizes.html"  onclick="window.location.assign(this.href)">
-      <span>Prizes</span>
-      <svg viewBox="0 0 21 15" aria-hidden="true" class="icon--barba">
-  <!-- <use attr.xlink:href="assets/svg/sprite.svg#barba-arrow-next"></use> -->
-  <use xlink:href="#barba-arrow-next"></use>
-</svg>
-    </a>
-  </li>
-</ul>
+
 
 
   <div class="feature-outer" style="transform: translate(0px);">
