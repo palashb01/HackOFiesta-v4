@@ -221,6 +221,7 @@ THEME PAGE
 .speaker:hover{
   background: linear-gradient(#6045ea, #8567f7);
   color: #ffffff;
+  transition: colors 0.3s;
 }
 .speaker:hover .img-container{
   transform: scale(1.15);
