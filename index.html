@@ -7,9 +7,9 @@
       content="Create badass, fluid and smooth transition between your website&#39;s pages."
     />
     <link rel="stylesheet" href="/scss/style.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="kool1.jpg">
-    <link rel="icon" type="image/png" sizes="32x32" href="kool1.jpg">
-    <link rel="icon" type="image/png" sizes="16x16" href="kool1.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/imgs/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/imgs/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/imgs/logo.png">
     <link
       rel="manifest"
       href="https://barba.js.org/favicons/site.webmanifest?rev=1"
@@ -67,6 +67,9 @@
       src="https://www.googletagmanager.com/gtag/js?id=UA-136431166-1"
     ></script>
     <script>
+      function handleReload(){
+        location.reload();
+      }
       window.GTAG_ID = "UA-136431166-1";
 
       window.dataLayer = window.dataLayer || [];
@@ -100,8 +103,9 @@
       <header class="site-header header" role="banner" data-component="header">
         <div class="header__wrapper">
           <div class="header__infos">
-            <a class="header__infos__logo" href="/">
-              <img src="kool1.jpg" alt="Barba.js logo" class="kool1" />
+            <a class="header__infos__logo" href="/" onclick="window.location.assign(this.href)">
+              <img src="assets/imgs/Frame 2.svg" alt="HOF V4" class="kool1 logoNoHovered" id="logo_nohover" />
+            <img src="assets/imgs/Group 10.svg" alt="HOF V4" class="kool1 logoHovered" id="logo_hover" />
               <span class="h-visually-hidden">Go to home</span>
             </a>
             <span class="header__infos__version">
@@ -140,7 +144,7 @@
                   <!-- Page -->
   
                   <li class="menu__pages__item" data-ref="menu.item">
-                    <a class="menu__pages__item__link" href="./about.html">
+                    <a class="menu__pages__item__link" href="./about.html" onclick="window.location.assign(this.href)">
                       About
                     </a>
   
@@ -150,7 +154,7 @@
                   </li>
   
                   <li class="menu__pages__item" data-ref="menu.item">
-                    <a class="menu__pages__item__link" href="/theme.html">
+                    <a class="menu__pages__item__link" href="/theme.html" onclick="window.location.assign(this.href)">
                       Theme
                     </a>
   
@@ -160,7 +164,7 @@
                   </li>
   
                   <li class="menu__pages__item" data-ref="menu.item">
-                    <a class="menu__pages__item__link" href="/prizes.html">
+                    <a class="menu__pages__item__link" href="/prizes.html"  onclick="window.location.assign(this.href)">
                       Prizes
                     </a>
   
@@ -170,7 +174,7 @@
                   </li>
   
                   <li class="menu__pages__item" data-ref="menu.item">
-                    <a class="menu__pages__item__link" href="/speaker.html">
+                    <a class="menu__pages__item__link" href="/speaker.html"  onclick="window.location.assign(this.href)">
                       Speakers
                     </a>
   
@@ -180,7 +184,7 @@
                   </li>
   
                   <li class="menu__pages__item" data-ref="menu.item">
-                    <a class="menu__pages__item__link" href="./sponsers.html">
+                    <a class="menu__pages__item__link" href="./sponsers.html" onclick="window.location.assign(this.href)">
                       Sponsers
                     </a>
   
@@ -189,10 +193,17 @@
                     <!-- Subpages [end]-->
                   </li>
                   <li class="menu__pages__item" data-ref="menu.item">
-                    <a class="menu__pages__item__link" href="/team.html"> Team </a>
+                    <a class="menu__pages__item__link" href="/team.html" onclick="window.location.assign(this.href)"> Team </a>
   
                     <!-- Subpages -->
   
+                    <!-- Subpages [end]-->
+                  </li>
+                  <li class="menu__pages__item" data-ref="menu.item">
+                    <a class="menu__pages__item__link" href="/faq.html"> Faq </a>
+      
+                    <!-- Subpages -->
+      
                     <!-- Subpages [end]-->
                   </li>
   
@@ -203,11 +214,11 @@
   
               <!-- Menu Footer -->
               <div class="menu__footer">
-                <a class="menu__footer__download" href="#" data-ref="menu.item">
+                <a class="menu__footer__download" href="#" data-ref="menu.item" onclick="window.location.assign(this.href)">  
                   REGISTER
                 </a>
                 <div class="menu__footer__extra menu-extra">
-                  <a class="menu-extra__twitter" href="https://twitter.com/hackofiesta" target="_blank"
+                  <a class="menu-extra__twitter" href="https://twitter.com/hackofiesta" target="_blank"  onclick="window.location.assign(this.href)"
                     data-barba-prevent data-ref="menu.item">
                     <svg class="menu-extra__twitter__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 13">
                       <path
@@ -439,6 +450,10 @@
 
                   // Set up the clock
                   document.getElementById("clock").innerHTML = getTime();
+                  const clock = document.getElementById("clock");
+                  if (navigator.userAgent.indexOf("Firefox") > 0) {
+                    clock.style.marginTop = "3em";
+                  }
                   // Set clock interval to tick clock
                   setInterval(() => {
                     document.getElementById("clock").innerHTML = getTime();
@@ -447,8 +462,8 @@
               </h1>
 
               <div class="homepage__buttons">
-                <a href="/features/user-friendly/" class="button">DISCORD</a>
-                <a href="docs/getstarted/intro/" class="button button--fill"
+                <a href="/features/user-friendly/" class="button" onclick="window.location.assign(this.href)">DISCORD</a>  
+                <a href="docs/getstarted/intro/" class="button button--fill"  onclick="window.location.assign(this.href)"
                   >REGISTER 📖</a
                 >
               </div>
@@ -469,5 +484,19 @@
     <script src="https://barba.js.org/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" defer></script>
     <script src="./js/main.js" defer></script>
+    <script>
+      const nohover = document.getElementById('logo_nohover');
+      const hover = document.getElementById('logo_hover');
+      nohover.onmouseenter = () => {
+        console.log('hover')
+        nohover.style.opacity = 0;
+        hover.style.opacity = 1;
+      }
+      nohover.onmouseleave = () => {
+        console.log('leave')
+        nohover.style.opacity = 1;
+        hover.style.opacity = 0;
+      }
+    </script>
   </body>
 </html>
